@@ -1,0 +1,49 @@
+.results{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-cont{
+    width: 52%;
+    height: 25%;
+    background-color: rgb(41,41,41);
+    /*opacity: 0.6;*/
+    border-radius: 2%;
+    margin: 5%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 25% 25%;
+    grid-template-areas: 
+    "foto nombre"
+    "foto info1"
+    "foto info2"
+}
+
+.results-foto{
+    grid-area: foto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    width: 50%;
+    height: 70%;
+}
+
+.results-nombre{
+    color: rgb(0, 255, 255);
+    font-size: 2rem;
+}
+
+.results-info1{
+    color: white;
+    font-size: 1rem;
+    align-self: center;
+}
+
+.results-info2{
+    color: white;
+    font-size: 1rem;
+    align-self: center;
+}

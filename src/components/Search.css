@@ -1,0 +1,26 @@
+.cont{
+    position: relative;
+}
+.texto{
+    border-radius: 50px;
+    height: 60px;
+    width: 300px;
+    padding-left: 70px;
+    padding-right: 50px;
+    outline: none;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    color: rgb(0, 255, 255);
+    font-size: 20px;
+}
+::placeholder{
+    color: yellow;
+    font-size: 20px;
+}
+.lupa{
+    width: 50px; 
+    height: 50px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}
