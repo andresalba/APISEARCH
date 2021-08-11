@@ -1,47 +1,36 @@
 import './Search.css';
-import { useEffect, useState } from 'react';
+import { useState} from 'react';
 
-function Search(props) {//hay que ponerle props por que le lleha la función traer desde pasarTraer de App.js
-  
-    const [busqueda, setBusqueda] = useState('');//variable que guarda lo escrito en el campo de búsqueda
-    const [respuesta, setRespuesta] = useState([]);//variable que guarda lo consultado por la base de datos
+function Search(props) {
+    const [ btn, setBtn] = useState(false);
+    const [ busqueda, setBusqueda] = useState('');//lo buscado por el usuario se envia a App
 
-    useEffect( async () => { //consulta la base de datos a penas renderiza la página
-        const data = await fetch('https://rickandmortyapi.com/api/character/?page=2');
-        const datos = await data.json();
-        console.log('la consulta a la base de datos desde Search.js es', datos);
-        setRespuesta(datos.results);//entrega un objeto y seleccionamos el array results que es interno 
-    },[]);//por esta línea solo lo hace una vez
-
-    const captura = (e) => {//esto captura lo escrito en input text y lo mete en busqueda
-        setBusqueda(e.target.value);//guardamos en busqueda lo escrito
-        console.log("el valor capturado input es ", busqueda);
+    const captura = (e) => { //funcion para capturar la busqueda
+        setBusqueda(e.target.value);//guardamos lo escrito
     }
 
-    const filtrarResultados = (e) => {//esto toma lo capturado en busqueda, y filtra datos y lo manda al parent
-        let filtro = [];//variable para guardar lo filtrado
-        for(var i=0; i<respuesta.length; i++){//metemos en el array filtro 
-            if(respuesta[i].name === busqueda){//lo que sea igual a busqueda
-                filtro.push(respuesta[i]);
-            }
-        }
-        props.pasarTraer(filtro);//esto pasa el resultado filtrado al parent
-      }
+    const  lupa = (e) => { //funcion para enviar el resultado y aparecer el btn next
+        e.preventDefault();//prevenir que el form mande al servidor
+        props.escrito(busqueda);//enviar busqueda a App
+        setBtn(true);//mostrar el boton de siguiente
+    }
+
+    const sigui = () => {
+        props.cambiar(1);//aumentar en App.js offset en uno  
+    }
 
     return (        
-
-        <div className="cont">
-			<input type="text" placeholder="texto" onChange={captura} className="texto" />
-			<input type="image" src="lupa.png" alt="lupa" onClick={filtrarResultados} className="lupa" />
-		</div>
-
+        <>
+            <h1>Search a Rick and Morty character</h1>
+            <div className="searchCont">
+                <form className="cont" onSubmit={lupa}>
+                    <input type="text" placeholder="texto" className="texto" onChange={captura}/>
+                    <input type="image" src="lupa.png" alt="lupa" className="lupa" />
+                </form>
+                { btn == true && <button className="nxt" onClick={sigui}>NEXT</button> }
+            </div>
+        </>
     );
 }
 
 export default Search;
-
-/*
-Notas: 
-Esta función envía los resultados de la búsqueda a su parent que es App.js
-La base de datos viene de la página: https://rickandmortyapi.com/documentation
-*/

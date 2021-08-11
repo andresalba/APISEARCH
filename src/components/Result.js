@@ -1,6 +1,6 @@
-import './Results.css';
+import './Result.css';
 
-function Results(props) {//acá se recibe lo enviado desde App.js
+function Result(props) {//acá se recibe lo enviado desde App.js
   
     return (
 
@@ -8,15 +8,15 @@ function Results(props) {//acá se recibe lo enviado desde App.js
             <div className="results-cont">
                 <img className="results-foto" src={props.foto} alt="foto" />
                 <h1 className="results-nombre">{props.nombre}</h1>
-                <p className="results-info1">Genero: {props.genero}</p>
-                <p className="results-info2">Especie: {props.especie}</p>
+                <p className="results-info1">Gender: {props.genero}</p>
+                <p className="results-info2">Species: {props.especie}</p>
             </div>
         </div>
 
     );
 }
 
-export default Results;
+export default Result;
 
 /*
 Notas: 
