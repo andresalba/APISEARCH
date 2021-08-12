@@ -30,6 +30,7 @@ function App() {
     }).then((resp)=>{
       setRespuesta(resp.results);
       console.log(resp.results);
+      setOffset(2);//esto por que?
     })
   },[]);
 
