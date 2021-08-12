@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/APISEARCH/static/css/main.61a994f0.chunk.css",
-    "main.js": "/APISEARCH/static/js/main.ab266ff9.chunk.js",
-    "main.js.map": "/APISEARCH/static/js/main.ab266ff9.chunk.js.map",
+    "main.js": "/APISEARCH/static/js/main.f96594e1.chunk.js",
+    "main.js.map": "/APISEARCH/static/js/main.f96594e1.chunk.js.map",
     "runtime-main.js": "/APISEARCH/static/js/runtime-main.20a452fb.js",
     "runtime-main.js.map": "/APISEARCH/static/js/runtime-main.20a452fb.js.map",
     "static/js/2.98c8d6f5.chunk.js": "/APISEARCH/static/js/2.98c8d6f5.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.20a452fb.js",
     "static/js/2.98c8d6f5.chunk.js",
     "static/css/main.61a994f0.chunk.css",
-    "static/js/main.ab266ff9.chunk.js"
+    "static/js/main.f96594e1.chunk.js"
   ]
 }
