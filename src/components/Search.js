@@ -25,7 +25,7 @@ function Search(props) {
             <div className="searchCont">
                 <form className="cont" onSubmit={lupa}>
                     <input type="text" placeholder="texto" className="texto" onChange={captura}/>
-                    <input type="image" src="lupa.png" alt="lupa" className="lupa" />
+                    <input type="image" src={process.env.PUBLIC_URL + "//lupa.png"} alt="lupa" className="lupa"/>
                 </form>
                 { btn == true && <button className="nxt" onClick={sigui}>NEXT</button> }
             </div>
