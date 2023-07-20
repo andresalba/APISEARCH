@@ -1,0 +1,56 @@
+.searchCont {
+    display: flex;
+    flex-direction: row;
+}
+
+.cont {
+    position: relative;
+}
+
+.texto {
+    border-radius: 50px;
+    height: 60px;
+    width: 300px;
+    padding-left: 70px;
+    padding-right: 50px;
+    outline: none;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    color: rgb(0, 255, 255);
+    font-size: 20px;
+}
+
+::placeholder {
+    color: yellow;
+    font-size: 20px;
+}
+
+.lupa {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}
+
+.nxt {
+    background-color: #555555;
+    color: white;
+    border-radius: 25px;
+    width: 15%;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 600px) {
+    .nxt {
+        font-size: 1.5rem; /* Adjust this value for smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nxt {
+        font-size: 1.0rem; /* Adjust this value for smaller screens */
+    }
+}
